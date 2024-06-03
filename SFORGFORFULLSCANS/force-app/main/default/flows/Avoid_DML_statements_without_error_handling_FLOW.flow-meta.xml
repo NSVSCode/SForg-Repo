@@ -4,8 +4,8 @@
     <assignments>
         <name>Assignment_1</name>
         <label>Assignment 1</label>
-        <locationX>757</locationX>
-        <locationY>423</locationY>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
         <assignmentItems>
             <assignToReference>vAR</assignToReference>
             <operator>Assign</operator>
@@ -13,6 +13,9 @@
                 <stringValue>&apos;END&apos;</stringValue>
             </value>
         </assignmentItems>
+        <connector>
+            <targetReference>anotherCreate</targetReference>
+        </connector>
     </assignments>
     <environments>Default</environments>
     <interviewLabel>Avoid DML statements without error handling {!$Flow.CurrentDateTime}</interviewLabel>
@@ -26,7 +29,7 @@
     <processMetadataValues>
         <name>CanvasMode</name>
         <value>
-            <stringValue>FREE_FORM_CANVAS</stringValue>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -37,10 +40,24 @@
     </processMetadataValues>
     <processType>Flow</processType>
     <recordCreates>
+        <name>anotherCreate</name>
+        <label>anotherCreate</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <inputAssignments>
+            <field>OpportunityId</field>
+            <value>
+                <elementReference>DisplayText</elementReference>
+            </value>
+        </inputAssignments>
+        <object>AccountPartner</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
         <name>CreateAccount</name>
         <label>CreateAccount</label>
-        <locationX>776</locationX>
-        <locationY>182</locationY>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
         <connector>
             <targetReference>Assignment_1</targetReference>
         </connector>
@@ -59,8 +76,8 @@
     <screens>
         <name>ErrorScreen</name>
         <label>Error Screen</label>
-        <locationX>1010</locationX>
-        <locationY>207</locationY>
+        <locationX>440</locationX>
+        <locationY>242</locationY>
         <allowBack>true</allowBack>
         <allowFinish>true</allowFinish>
         <allowPause>true</allowPause>
@@ -73,8 +90,8 @@
         <showHeader>true</showHeader>
     </screens>
     <start>
-        <locationX>650</locationX>
-        <locationY>48</locationY>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
         <connector>
             <targetReference>CreateAccount</targetReference>
         </connector>
