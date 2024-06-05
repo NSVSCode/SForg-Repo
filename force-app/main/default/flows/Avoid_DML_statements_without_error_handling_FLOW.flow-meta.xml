@@ -62,7 +62,7 @@
             <targetReference>Assignment_1</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>ErrorScreen</targetReference>
+            <targetReference>ErrorScreen</targetReference>     
         </faultConnector>
         <inputAssignments>
             <field>Name</field>
