@@ -23,7 +23,7 @@
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
-            <stringValue>LightningFlowBuilder</stringValue>
+            <stringValue>LightningFlowBuilders</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -62,7 +62,7 @@
             <targetReference>Assignment_1</targetReference>
         </connector>
         <faultConnector>
-            <targetReference>ErrorScreen</targetReference>     
+            <targetReference>ErrorScreen</targetReference>
         </faultConnector>
         <inputAssignments>
             <field>Name</field>
