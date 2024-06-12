@@ -23,7 +23,7 @@
     <processMetadataValues>
         <name>BuilderType</name>
         <value>
-            <stringValue>LightningFlowBuilders</stringValue>
+            <stringValue>LightningFlowBuilder</stringValue>
         </value>
     </processMetadataValues>
     <processMetadataValues>
@@ -35,7 +35,7 @@
     <processMetadataValues>
         <name>OriginBuilderType</name>
         <value>
-            <stringValue>LightningFlowBuilderBonito</stringValue>
+            <stringValue>LightningFlowBuilder</stringValue>
         </value>
     </processMetadataValues>
     <processType>Flow</processType>
@@ -44,6 +44,9 @@
         <label>anotherCreate</label>
         <locationX>176</locationX>
         <locationY>350</locationY>
+        <connector>
+            <targetReference>secondFaultRecord</targetReference>
+        </connector>
         <inputAssignments>
             <field>OpportunityId</field>
             <value>
@@ -68,6 +71,20 @@
             <field>Name</field>
             <value>
                 <stringValue>Luis</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordCreates>
+        <name>secondFaultRecord</name>
+        <label>secondFaultRecord</label>
+        <locationX>176</locationX>
+        <locationY>458</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>DisplayText</elementReference>
             </value>
         </inputAssignments>
         <object>Account</object>
